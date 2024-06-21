@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './CookieBar.module.css';
-import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 const CookieBar = () => {
   const [isVisible, setIsVisible] = useState(true);
