@@ -1,40 +1,37 @@
 @import '../variables.css';
+
 .subscriptionForm {
-    margin: 20px 0;
-  }
-  
-  .form {
-    display: flex;
-    flex-direction: column; /* Change to column to stack input and button */
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .emailInput {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px; /* Add margin below the input */
-    width: 100%; /* Full width */
-    max-width: 300px; /* Max width to keep it from being too wide */
-  }
-  
-  .subscribeButton {
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: var(--button-font-weight);
-    background-color: var(--button-secondary-background-color);
-    color: var(--button-secondary-text-color);
-    border: none;
-    border-radius: var(--button-border-radius);
-    cursor: pointer;
-    width: 100%; /* Full width */
-    max-width: 300px; /* Max width to keep it from being too wide */
-  }
-  
-  .subscribeButton:hover {
-    background-color: var(--button-secondary-hover-background-color);
-    color: var(--button-secondary-hover-text-color);
-  }
-  
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row; /* Change to row to align input and button horizontally */
+  justify-content: center;
+  align-items: center;
+}
+
+.emailInput {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px; /* Add margin to the right of the input */
+  width: auto; /* Auto width for better alignment */
+}
+
+.subscribeButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: var(--button-font-weight);
+  background-color: var(--button-secondary-background-color);
+  color: var(--button-secondary-text-color);
+  border: none;
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+}
+
+.subscribeButton:hover {
+  background-color: var(--button-secondary-hover-background-color);
+  color: var(--button-secondary-hover-text-color);
+}

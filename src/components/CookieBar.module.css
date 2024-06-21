@@ -1,67 +1,71 @@
 @import '../variables.css';
 
 .cookieBar {
-    background-color: var(--cookies-background-color);
-    padding: 10px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 1000;
-    box-sizing: border-box; /* Ensures padding is included in the total width */
-  }
-  
-  .cookieBar p {
-    margin: 0;
-    flex: 1;
-    font-size: 14px; /* Slightly smaller font size for mobile */
-    color: var(--cookies-text-color);;
-  }
-  
-  .cookieBar a {
-    color: var(--cookies-link-color);
-    text-decoration: none;
-    font-weight: var(--cookies-link-font-weight);
-  }
-  
-  .cookieBar a:hover {
-    text-decoration: underline;
-  }
-  
-  .confirmButton {
-    background-color: var(--button-secondary-background-color);
-    color: var(--button-secondary-text-color);
-    font-weight: var(--button-font-weight);
-    border: none;
+  background-color: var(--cookies-background-color);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border-radius: 10px; /* Округлі кути */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тінь */
+  z-index: 1000;
+  max-width: 600px; /* Встановлюємо максимальну ширину */
+  box-sizing: border-box;
+}
+
+.cookieBar p {
+  margin: 0;
+  flex: 1;
+  font-size: 14px; /* Розмір шрифту */
+  color: var(--cookies-text-color);
+}
+
+.cookieBar a {
+  color: var(--cookies-link-color);
+  text-decoration: none;
+  font-weight: var(--cookies-link-font-weight);
+}
+
+.cookieBar a:hover {
+  text-decoration: underline;
+}
+
+.confirmButton {
+  background-color: var(--button-primary-background-color); /* Змінили на основний колір кнопки */
+  color: var(--button-primary-text-color);
+  font-weight: var(--button-font-weight);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.confirmButton:hover {
+  background-color: var(--button-primary-hover-background-color);
+  color: var(--button-primary-hover-text-color);
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 768px) {
+  .cookieBar {
+    top: 10px;
+    right: 10px;
     padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-left: 10px;
+    max-width: 90%; /* Робимо ширину адаптивною */
+    flex-direction: column;
   }
-  
-  .confirmButton:hover {
-    background-color: var(--button-secondary-hover-background-color);
-    color: var(--button-secondary-hover-text-color);
+
+  .cookieBar p {
+    margin-bottom: 10px;
+    width: 100%;
   }
-  
-  /* Media Query for mobile devices */
-  @media (max-width: 768px) {
-    .cookieBar {
-      flex-direction: column; /* Stack items vertically */
-      align-items: flex-start; /* Align items to the start */
-      padding: 15px 5%; /* Add more padding for mobile */
-    }
-  
-    .cookieBar p {
-      margin-bottom: 10px; /* Add margin below paragraph */
-      width: 100%; /* Make paragraph take full width */
-    }
-  
-    .confirmButton {
-      width: 100%; /* Make button take full width */
-      text-align: center; /* Center text in the button */
-    }
+
+  .confirmButton {
+    width: 100%;
+    text-align: center;
   }
-  
+}

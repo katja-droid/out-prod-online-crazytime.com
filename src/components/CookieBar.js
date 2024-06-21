@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import styles from './CookieBar.module.css';
 
@@ -6,7 +5,6 @@ const CookieBar = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Check if the user has already accepted cookies
     const hasAcceptedCookies = localStorage.getItem('cookiesAccepted');
     if (hasAcceptedCookies) {
       setIsVisible(false);
